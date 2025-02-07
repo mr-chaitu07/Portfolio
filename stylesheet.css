@@ -589,6 +589,8 @@ form textarea {
   font-size: 20px;
   color: #081b29;
   letter-spacing: 0rem;
+  border: none;
+  outline: none;
   text-decoration: none;
   font-weight: 600;
   opacity: 0;
