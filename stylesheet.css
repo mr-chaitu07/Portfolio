@@ -226,51 +226,132 @@ body {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  
+  display: flex;
   align-items: center;
-  gap: 1.5rem;
+  position: relative;
+  padding-top: 70px;
+  max-width: 100%;
+  margin-left: 50px;
 }
-
-.about-img img {
-  max-width: 630px;
-  width: 240px;
-  height: 250px;
-  border-radius: 50%;
-  margin-top: 40px;
-  border: 2px solid rgb(67, 216, 121);
-  margin-left: 110px;
-}
-
-.about-img img {
-  box-shadow: 0 0 5px rgb(67, 216, 121), 0 0 25px rgb(67, 216, 121),
-    0 0 50px rgb(67, 216, 121), 0 0 100px rgb(67, 216, 121);
-}
-
+/* About Section - Fullscreen */
 .about-text {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+  text-align: center; /* Center text on mobile */
 }
 
+/* About Heading */
 .about-text h2 {
   font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
+
 .about-text h2 span {
   color: rgb(67, 216, 121);
 }
+
+/* Subheading */
 .about-text h4 {
   font-size: 30px;
   font-weight: 600;
   color: white;
   line-height: 1.7;
-  margin: 15px 0 30px;
+  margin-bottom: 10px;
 }
+
+/* Paragraph */
 .about-text p {
   color: white;
   font-size: 20px;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  max-width: 200%; /* Limits text width for better readability */
+   /* Padding for smaller screens */
 }
+
+/* Button Styling */
+.about-text .btn-box {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: rgb(67, 216, 121);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+
+.about-text .btn-box:hover {
+  background: rgb(45, 170, 95);
+  box-shadow: 0 0 15px rgb(67, 216, 121);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .about-text h2 {
+    font-size: 50px;
+  }
+
+  .about-text h4 {
+    font-size: 25px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    height: fit-content; /* Allow flexible height on smaller screens */
+    padding: 50px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 45px;
+  }
+
+  .about-text h4 {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-text .btn-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 35px;
+  }
+
+  .about-text h4 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .about-text .btn-box {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 .container {
   padding: 50px;
 }
@@ -296,9 +377,7 @@ body {
 
 @media (min-width: 768px) {
   .services-list {
-    grid-template-columns: repeat(
-      3,
-      minmax(240px, 1fr)
+    grid-template-columns: repeat(3, minmax(240px, 1fr)
     ); /* Three columns on larger screens */
     grid-gap: 40px; /* Restore larger gap */
   }
