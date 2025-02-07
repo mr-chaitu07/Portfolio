@@ -44,9 +44,7 @@ body {
 /* Hover Effect */
 .navbar a:hover {
   border-radius: 7px;
-  box-shadow:  
-    5px 5px 5px rgb(67, 216, 121), 
-    0 0 25px rgb(67, 216, 121);
+  box-shadow: 5px 5px 5px rgb(67, 216, 121), 0 0 25px rgb(67, 216, 121);
 }
 
 /* Default Navbar - Desktop View */
@@ -96,7 +94,6 @@ body {
     margin: 5px 0; /* Space between links */
   }
 }
-
 
 .Home {
   position: relative;
@@ -226,7 +223,6 @@ body {
 }
 
 .about {
-  
   display: flex;
   align-items: center;
   position: relative;
@@ -272,7 +268,7 @@ body {
   font-size: 20px;
   line-height: 1.6;
   max-width: 200%; /* Limits text width for better readability */
-   /* Padding for smaller screens */
+  /* Padding for smaller screens */
 }
 
 /* Button Styling */
@@ -377,7 +373,9 @@ body {
 
 @media (min-width: 768px) {
   .services-list {
-    grid-template-columns: repeat(3, minmax(240px, 1fr)
+    grid-template-columns: repeat(
+      3,
+      minmax(240px, 1fr)
     ); /* Three columns on larger screens */
     grid-gap: 40px; /* Restore larger gap */
   }
@@ -715,7 +713,6 @@ section {
     max-width: 600px; /* Adjust max width */
   }
 }
-
 
 .contact-form input::placeholder {
   color: black;
